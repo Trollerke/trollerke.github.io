@@ -308,10 +308,3 @@ updateResults();
 });
 
 
-
-//eltávolítani negyedik oszlopot - done
-//márkafüggetlenné tenni
-//CBD mennyiséget kiírni termékek mellé - done
-//disclaimer a kalkulátor alá - done
-//termékoldalt linkelni?
-//cseppeket kiírni?
