@@ -11,6 +11,7 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f3f3f3;
+    
 }
 
 #usage {
@@ -37,7 +38,9 @@ input[type=range] {
     margin-top: 10px;
 }
 
-
+#myChart {
+    border-top: none;
+}
 
 
 
