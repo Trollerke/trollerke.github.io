@@ -212,19 +212,19 @@ function createOrUpdateChart(firstWeekDosages, secondWeekDosages, thirdWeekDosag
                 labels: ['Első hét', 'Második hét', 'Harmadik héttől kezdve'],
                 datasets: [
                     {
-                        label: 'Napi adag első héten',
+                        label: 'Napi adag első héten (mg)',
                         data: firstWeekDosages,
                         backgroundColor: 'rgb(75, 192, 192)', // Set the bar color
                         tension: 0.1
                     },
                     {
-                        label: 'Napi adag második héten',
+                        label: 'Napi adag második héten (mg)',
                         data: secondWeekDosages,
                         backgroundColor: 'rgb(255, 99, 132)', // Set the bar color
                         tension: 0.1
                     },
                     {
-                        label: 'Napi adag harmadik héttől kezdve',
+                        label: 'Napi adag harmadik héttől kezdve (mg)',
                         data: thirdWeekDosages,
                         backgroundColor: 'rgb(54, 162, 235)', // Set the bar color
                         tension: 0.1
@@ -236,6 +236,13 @@ function createOrUpdateChart(firstWeekDosages, secondWeekDosages, thirdWeekDosag
                 scales: {
                     y: {
                         ticks: {
+                            afterBuildTicks: function(scale) {
+                                scale.ticks = [];
+                                var stepSize = Math.ceil(scale.max / 5); // 5 is the desired number of ticks
+                                for (var i = 0; i <= scale.max; i += stepSize) {
+                                    scale.ticks.push(i);
+                                }
+                            },
                             callback: function(value, index, values) {
                                 return value + ' mg';
                             }
