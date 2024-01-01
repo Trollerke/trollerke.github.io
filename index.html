@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopify Kalkulátor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="calculator">
+    <div id="calcTitle">
+        <h1>CBD Adagolás kalkulátor</h1>
+    
+    <div>
+        <label for="usage">Felhasználási cél:</label>
+        <select id="usage">
+            <!-- Ide kerülnek a felhasználás opciók -->
+        </select>
+    </div>
+
+    
+    <div style="padding-top: 25px;">
+        <label for="weight">Testsúly:</label>
+        <input type="range" id="weight" min="10" max="150" step="10" value="80">
+        <span id="weightValue">80 kg</span>
+    </div>
+    <style>
+        #productOptions {
+            padding-top: 30px;
+        }
+    </style>
+    <div id="productOptions">
+        <!-- Ide kerülnek a termék opciók -->
+    </div>
+
+    <div id="results" style="padding-top: 20px;">
+        <p>Egy üveg Cannada olaj ennyi napig elég neked: <span id="daysSupply"></span></p>
+        <!-- Ide kerülhetnek további eredmények -->
+    </div>
+    <div style="padding-bottom: 10px;"></div>
+
+    <!-- Add the canvas element here -->
+    <canvas id="myChart"></canvas>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    
+    <div id="bottomText">
+        <p><small>Kalkulátor által meghatározott adagolási mennyiségek márkafüggetlenek. A kalkulátor javaslatai nem minősülnek orvosi tanácsnak és a legjobb tudásunkat tükrözik a CBD klinikai tesztjeit bemutató publikus tanulmányok alapján. 
+            A tanulmányok listáját megtalálod <a href="https://cannadaonline.com/blogs/news/cbd-hatasa-az-egeszsegre" style="color: #52BA2F;">ezen a linken</a>. Amennyiben terápiás 
+            céllal használod a CBD-t, mindenképpen tudasd orvosoddal, és hagyj 3 órát eltelni a gyógyszer és CBD beszedése között.</small></p>
+    </div>
+
