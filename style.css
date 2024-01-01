@@ -38,7 +38,7 @@ input[type=range] {
 }
 
 #myChart {
-    min-height: 300px; /* Replace 300px with the minimum height you want */
+    min-height: 1000px; /* Replace 300px with the minimum height you want */
 }
 
 
